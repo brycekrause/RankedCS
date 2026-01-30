@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function App() {
+export default function CasualButton() {
     return (
-        <div className="bg-green-500 text-white p-10 text-4xl">
+        <div className="casualButton">
             Casual
         </div>
     );
