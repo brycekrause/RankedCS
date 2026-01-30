@@ -1,0 +1,32 @@
+// Register
+fetch("http://localhost:4000/register", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ email: "test@test.com", password: "123456" }),
+})
+.then(res => res.json())
+.then(console.log)
+.catch(console.error);
+
+// Login
+fetch("http://localhost:4000/login", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ email: "tes1t@te1st.com", password: "123456" }),
+})
+  .then(res => res.json())
+  .then(data => console.log(data));
+
+// Stats
+const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...";
+
+fetch("http://localhost:4000/stats", {
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json",
+    "Authorization": `Bearer ${token}`
+  }
+})
+  .then(res => res.json())
+  .then(console.log)
+  .catch(console.error);

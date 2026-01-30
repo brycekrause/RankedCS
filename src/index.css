@@ -2,14 +2,3 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-html,
-body,
-#root {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-#root {
-  position: relative;
-}
